@@ -1,0 +1,35 @@
+// UML Diagram: Invoice System
+digraph {
+	Invoice [label="Invoice
+------------------------------
+InvoiceID: uint16
+Number: uint16
+Date: datetime
+CustomerRef: uint32
+BrokerRef: uint8
+Creator: uint16
+PayerType: uint8
+InvoicePrice: uint64
+InvoiceAdditionAmount: uint64
+InvoiceReductionAmount: uint32
+InvoiceNetPrice: uint64
+InvoiceStauts: str
+CreationDate: datetime
+SalesArea: str
+RegionalDivision: str
+SalesAreaNumber: uint8
+RegionalDivisionNumber: uint8
+InvoiceStatusNumber: uint8
+"]
+	InvoiceItem [label="InvoiceItem
+------------------------------
+InvoiceItemID: uint16
+InvoiceRef: uint16
+ProductRef: uint16
+Quantity: uint16
+Fee: uint64
+Price: uint64
+CreationDate: datetime
+"]
+	Invoice -> InvoiceItem [label="1 → *"]
+}
